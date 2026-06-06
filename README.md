@@ -8,7 +8,7 @@ Tests implemented using vitest.
 
 ### Online Demo
 
-The API is will be avaliable soon.
+The API is avaliable at https://api-rest-fastify-nodejs-h135.onrender.com.
 
 #### Avaliable routes
 
