@@ -7,7 +7,6 @@ export async function up(knex: Knex): Promise<void> {
     table.text('password').notNullable()
     table.text('session_id').notNullable()
     table.text('session_id_expires_at')
-    table.foreign('id').references('foods.user_id')
     table
       .timestamp('created_at', { useTz: true })
       .notNullable()

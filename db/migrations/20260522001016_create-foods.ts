@@ -8,7 +8,12 @@ export async function up(knex: Knex): Promise<void> {
     table.date('date').notNullable()
     table.time('time').notNullable()
     table.boolean('healthy').notNullable()
-    table.uuid('user_id')
+    table
+      .uuid('user_id')
+      .notNullable()
+      .references('id')
+      .inTable('users')
+      .onDelete('CASCADE')
     table
       .timestamp('created_at', { useTz: true })
       .notNullable()
